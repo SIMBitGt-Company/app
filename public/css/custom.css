@@ -1,0 +1,48 @@
+/*  Erick Suy Marzo 2017
+presentacion de servicios ----- border con badges*/
+.boder-Badges {
+    border-radius: 10px;
+    border: 7px solid;
+    padding: 10px;
+    border-color: rgba(90, 88, 88, 1);
+    height: 100%;
+    width: 100%;
+}
+
+.badges-Border {
+    margin-left: 70%;
+    margin-top: -63px;
+    width: 125px;
+    height: 125px;    
+    border-radius: 75px;
+    border: 7px solid rgba(90, 88, 88, 1);
+    color: rgba(90, 88, 88, 1);
+    line-height: 136px;
+    text-align: center;
+    font-size: 18px;
+    background: white;
+    box-shadow: 0 0 0 3px white; 
+}
+
+.badges-Border:hover {
+    line-height: 150px;
+    font-size: 20px;
+    background: rgba(90, 88, 88, 1);
+    border: 7px solid rgba(90, 88, 88, 1);
+    color: white;
+    cursor: pointer;
+}
+/*--- hacer todas las row del mismo tamaño para evitar desplazamientos */
+.row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+  flex-wrap: wrap;
+}
+.row > [class*='col-'] {
+  display: flex;
+  flex-direction: column;
+}
+
+
