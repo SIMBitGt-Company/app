@@ -1,8 +1,8 @@
-<div class="container" id="DivRegUsuario"  style="background: #212121" hidden>
+<div class="container" id="DivSearchUser"  style="background: #212121" hidden>
     <div class="row">
         <div class="col-md-11 col-md-offset-0"><br>
             <div class="panel panel-primary">
-                <div class="panel-heading">Registrar Usuario</div>
+                <div class="panel-heading">Buscar Usuario</div>
                 <div class="panel-body">
                     <form class="form-horizontal" role="form" method="POST" action="{{ url('user')}}">
                         {{ csrf_field() }}

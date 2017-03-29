@@ -1,11 +1,12 @@
-<div class="container" id="DivRegBrand" hidden>
+<div class="container" id="DivRegBrand"  style="background: #212121" hidden>
     <div class="row">
-        <div class="col-md-11 col-md-offset-0">
-            <div class="panel panel-default">
+        <div class="col-md-11 col-md-offset-0"><br>
+            <div class="panel panel-primary">
                 <div class="panel-heading">Registrar Marca</div>
                 <div class="panel-body">
-                    <form class="form-horizontal" role="form" method="POST" action="{{ url('brand')}}">
-                        {{ csrf_field() }}
+                    <form id="frmRegBrand"class="form-horizontal" role="form">
+                    <!--form id="frmRegBrand"class="form-horizontal" role="form" method="POST" action="{{ url('brand')}}"-->
+                        <!--{{ csrf_field() }}-->
 
                         <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
                             <label for="name" class="col-md-4 control-label">Nombre</label>
@@ -37,13 +38,18 @@
 
                         <div class="form-group">
                             <div class="col-md-8 col-md-offset-4">
-                                <button type="submit" class="btn btn-primary">
-                                    <i class="fa fa-fw fa-save"></i>
-                                    Guardar
-                                </button>
+                                <input type="submit" class="btn btn-primary" value="Guardar">
+                                    <!--i class="fa fa-fw fa-save"></i>
+                                    Guardar-->
+                                </input>
+
                             </div>
                         </div>
-                        @if(session()->has('msj'))
+
+                        <div id="mensaje" class="alert" hidden>
+                            <strong></strong>
+                        </div>
+                        <!--@if(session()->has('msj'))
                             <div class="alert alert-success">
                                 <strong>Exito!</strong> {{ session('msj') }}
                             </div>
@@ -51,9 +57,10 @@
                             <div class="alert alert-danger">
                                 <strong>Error!</strong> {{ session('msjerror') }}
                             </div>
-                        @endif
+                        @endif-->
                     </form>
                 </div>
+                <div class="panel-footer">@Simbit</div>
             </div>
         </div>
     </div>

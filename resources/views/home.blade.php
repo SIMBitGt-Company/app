@@ -4,9 +4,28 @@
 	<script type="text/javascript" src="{{ asset('js/change.js') }}"></script>
 @endsection
 @section('content')
-	@include('cars.register_brand')
-	@include('users.register')
+<!-- Accesories -->
+	@include('accesories.register')
+	@include('accesories.search')
+<!-- Cars -->
+	@include('cars.orders')
 	@include('cars.register')
+	@include('cars.register_brand')
+	@include('cars.search')
+<!-- Items -->
+	@include('items.register')
+	@include('items.search')
+<!-- Orders -->
+	@include('orders.register')
+	@include('orders.search')
+	@include('orders.show')
+<!-- Show -->
+	@include('show.myorders')
+<!-- Users -->
+	@include('users.register')
+	@include('users.orders')
+	@include('users.search')
+	
 @endsection
 
 

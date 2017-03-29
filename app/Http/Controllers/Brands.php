@@ -5,6 +5,7 @@ namespace MyApp\Http\Controllers;
 use Illuminate\Http\Request;
 use MyApp\Brand;
 //use Storage;
+
 class Brands extends Controller
 {
     /**
@@ -15,6 +16,7 @@ class Brands extends Controller
     public function index()
     {
         //
+
     }
 
     /**
@@ -38,24 +40,42 @@ class Brands extends Controller
         //
 
 
-        $this->validate($request,[
+        try
+        {
+            $this->validate($request,[
             'name' => 'required|unique:brands',
             'description' => 'required'
 
             ]);
 
-        $brand = new Brand();
-        $brand->name = $request->name;
-        $brand->description = $request->description;
-        
+            $brand = new Brand();
+            $brand->name = $request->name;
+            $brand->description = $request->description;
+            
+            $brand->save();
 
-       if($brand->save())
-        {
-            return back()->with('msj','Marca Guardada Exitosamente');
+            return response(['msj'=>'Marca Guardada Exitosamente'],200);
+
+            /*
+                200 ok
+                500 error del servidor
+                404 not found
+                403 bad request
+                503 bad gw
+            */
+
+           /*if($brand->save())
+            {
+                return back()->with('msj','Marca Guardada Exitosamente');
+            }
+            else
+            {
+                return back()->with('msjerror','Marca No Guardada');
+            }*/
         }
-        else
+        catch (\Exception $e)
         {
-            return back()->with('msjerror','Marca No Guardada');
+            return response(['msj'=>'Marca No Guardada'],500);
         }
 
         /**

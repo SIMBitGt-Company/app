@@ -94,19 +94,19 @@
                 <li>
                     <a href="#" data-toggle="collapse" data-target="#submenu-4"><i class="fa fa-fw fa-tag"></i>  CATALOGO DE ACCESORIOS <i class="fa fa-fw fa-angle-down pull-right"></i></a>
                     <ul id="submenu-4" class="collapse">
-                        <li><a href="#"><i class="fa fa-plus"></i> Registrar accesorio</a></li>
-                        <li><a href="#"><i class="fa fa-search"></i> Consultar accesorios</a></li>
+                        <li><a id="NewAccesorie"><i class="fa fa-plus"></i> Registrar accesorio</a></li>
+                        <li><a id="SearchAccesorie"><i class="fa fa-search"></i> Consultar accesorios</a></li>
                     </ul>
                 </li>
                 <li>
                     <a href="#" data-toggle="collapse" data-target="#submenu-5"><i class="fa fa-fw fa-tag"></i>  CATALOGO DE SERVICIOS <i class="fa fa-fw fa-angle-down pull-right"></i></a>
                     <ul id="submenu-5" class="collapse">
-                        <li><a href="#"><i class="fa fa-plus"></i> Crear Nuevo Catalogo</a></li>
-                        <li><a href="#"><i class="fa fa-search"></i> Consultar Catalogos</a></li>
+                        <li><a id="NewService"><i class="fa fa-plus"></i> Crear Nuevo Catalogo</a></li>
+                        <li><a id="SearchService"><i class="fa fa-search"></i> Consultar Catalogos</a></li>
                     </ul>
                 </li>
                 <li>
-                    <a href="#" data-toggle="collapse" ><i class="fa fa-fw fa-history"></i>  HISTORIAL</a>
+                    <a id="ShowMyOrders" data-toggle="collapse" ><i class="fa fa-fw fa-history"></i>  HISTORIAL</a>
                 </li>
             </ul>
         </div>
@@ -117,11 +117,9 @@
 
         <div class="container-fluid">
    <div class="row">
-    <img src="img/header_service.png" class="img-responsive">
+    <img src="img/header.jpg" class="img-responsive">
    </div>
 </div>
-
-
     @yield('content')
    
 </div>
