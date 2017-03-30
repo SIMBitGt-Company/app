@@ -1,9 +1,9 @@
 <div class="container" id="DivRegOrder" style="background: #212121">
     <div class="row">
         <div class="col-md-11 col-md-offset-0"><br>
-            <div class="panel panel-primary">
-                <div class="panel-heading">Registrar Orden</div>
-                <div class="panel-body">
+            <!--div class="panel panel-default"-->
+                <div class="panel-heading"><h3>Registrar Orden</h3></div>
+                <!--div class="panel-body"-->
                     <form class="form-horizontal" role="form" method="POST" action="{{ url('user')}}">
                         {{ csrf_field() }}
 
@@ -107,7 +107,7 @@
                         </div>
 
                         <div class="form-group">
-                            <div class="col-md-8 col-md-offset-4"> 
+                            <div class="col-md-8 col-md-offset-4">
                                 <button type="submit" class="btn btn-primary"><i class="fa fa-fw fa-save"></i>
                                     Guardar
                                 </button>
@@ -125,12 +125,10 @@
                         @endif
 
                     </form>
-                </div>
+                <!--/div-->
 
-                <div class="panel-footer">@Simbit</div>
-            </div>
+                <!--div class="panel-footer">@Simbit</div-->
+            <!--/div-->
         </div>
     </div>
 </div>
-
-

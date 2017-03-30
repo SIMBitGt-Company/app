@@ -1,9 +1,9 @@
 <div class="container" id="DivRegBrand"  style="background: #212121" hidden>
     <div class="row">
         <div class="col-md-11 col-md-offset-0"><br>
-            <div class="panel panel-primary">
-                <div class="panel-heading">Registrar Marca</div>
-                <div class="panel-body">
+            <!--div class="panel panel-primary"-->
+                <div class="panel-heading"><h3>Registrar Marca</h3></div>
+                <!--div class="panel-body"-->
                     <form id="frmRegBrand"class="form-horizontal" role="form">
                     <!--form id="frmRegBrand"class="form-horizontal" role="form" method="POST" action="{{ url('brand')}}"-->
                         <!--{{ csrf_field() }}-->
@@ -59,11 +59,8 @@
                             </div>
                         @endif-->
                     </form>
-                </div>
-                <div class="panel-footer">@Simbit</div>
+                <!--/div>
+                <div class="panel-footer">@Simbit</div-->
             </div>
         </div>
     </div>
-</div>
-
-

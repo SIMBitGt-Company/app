@@ -1,9 +1,7 @@
 <div class="container" id="DivShowOrder"  style="background: #212121" hidden>
     <div class="row">
         <div class="col-md-11 col-md-offset-0"><br>
-            <div class="panel panel-primary">
-                <div class="panel-heading">Mostrar Ordenes</div>
-                <div class="panel-body">
+                <div class="panel-heading"><h3>Mostrar Ordenes</h3></div>
                     <form class="form-horizontal" role="form" method="POST" action="{{ url('user')}}">
                         {{ csrf_field() }}
 
@@ -107,7 +105,7 @@
                         </div>
 
                         <div class="form-group">
-                            <div class="col-md-8 col-md-offset-4"> 
+                            <div class="col-md-8 col-md-offset-4">
                                 <button type="submit" class="btn btn-primary"><i class="fa fa-fw fa-save"></i>
                                     Guardar
                                 </button>
@@ -125,11 +123,6 @@
                         @endif
 
                     </form>
-                </div>
-                <div class="panel-footer">@Simbit</div>
-            </div>
         </div>
     </div>
 </div>
-
-

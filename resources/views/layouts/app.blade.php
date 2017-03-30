@@ -12,7 +12,9 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/transparent.css') }}" rel="stylesheet">
     <link href="{{ asset('css/menu.css') }}" rel="stylesheet">
+
     <!-- Scripts -->
     <script>
         window.Laravel = {!! json_encode([
@@ -113,15 +115,13 @@
          @endif
         <!-- /.navbar-collapse -->
     </nav>
-        
-
-        <div class="container-fluid">
+<!--div class="container-fluid">
    <div class="row">
     <img src="img/header.jpg" class="img-responsive">
    </div>
-</div>
+</div-->
     @yield('content')
-   
+
 </div>
 
     <!-- Scripts -->

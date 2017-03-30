@@ -1,5 +1,12 @@
-/*  Erick Suy Marzo 2017
-presentacion de servicios ----- border con badges*/
+nav
+{
+    opacity: 0.7;
+    background: url('http://pre11.deviantart.net/a0f0/th/pre/f/2013/065/6/5/car_service_by_zumadrian-d5x4u12.jpg') fixed;
+    background-size: cover;
+    padding: 0;
+    margin: 0;
+}
+
 .boder-Badges {
     border-radius: 10px;
     border: 7px solid;
@@ -13,7 +20,7 @@ presentacion de servicios ----- border con badges*/
     margin-left: 70%;
     margin-top: -63px;
     width: 125px;
-    height: 125px;    
+    height: 125px;
     border-radius: 75px;
     border: 7px solid rgba(90, 88, 88, 1);
     color: rgba(90, 88, 88, 1);
@@ -21,7 +28,7 @@ presentacion de servicios ----- border con badges*/
     text-align: center;
     font-size: 18px;
     background: white;
-    box-shadow: 0 0 0 3px white; 
+    box-shadow: 0 0 0 3px white;
 }
 
 .badges-Border:hover {
@@ -44,5 +51,3 @@ presentacion de servicios ----- border con badges*/
   display: flex;
   flex-direction: column;
 }
-
-

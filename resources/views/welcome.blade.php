@@ -34,7 +34,7 @@
 <body>
 
     <!-- barra de navegacion -->
-    <nav class="navbar navbar-inverse bg-faded navbar-fixed-top">
+    <nav class="navbar navbar-inverse bg-faded navbar-fixed-top" role="navigation">
         <div class="container topnav">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navSIMBit">
@@ -135,7 +135,7 @@
     </div>
     <!-- Page Content -->
 <div class="content-section-a" style="background-color: rgba(90, 88, 88, .5);  height: 70px;">
-        
+
     </div>
     <a  name="method"></a>
     <div class="jumbotron" align="Center">
@@ -166,7 +166,7 @@
                 <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
                     <hr class="section-heading-spacer">
                     <div class="clearfix"></div>
-                    <h2 class="section-heading">Diseño</h2> 
+                    <h2 class="section-heading">Diseño</h2>
                     <p class="lead">Buscamos la facilidad, la elegancia y la estetica personalizada trabajando conjunto al cliente para el cumpliendo con estandares de calidad, requeridos por cada uno.</p>
                 </div>
                 <div class="col-lg-5 col-sm-pull-6  col-sm-6">
@@ -207,7 +207,7 @@
                     <h2>Nuestros Servicios</h2>
         </div>
         <div class="container">
-            <div class="row ">                
+            <div class="row ">
                 <div class="col-md-4">
                     <div class="boder-Badges">
                         <div class="badges-Border">
@@ -229,7 +229,7 @@
                         <div class="clearfix"></div>
                         <h2 class="section-heading" align="center">Desarrollo de Aplicaciones Moviles</h2>
                         <p class="lead">
-                            La necesidad de estar en contacto desde cualquier punto y en cualquier momento hace de nosotros pensemos en soluciones moviles posibilitando la relacion directa del consumidor de sus productos hasta la palma de su mano y creando asi mas posibilidades de consumo en el mercado.                            
+                            La necesidad de estar en contacto desde cualquier punto y en cualquier momento hace de nosotros pensemos en soluciones moviles posibilitando la relacion directa del consumidor de sus productos hasta la palma de su mano y creando asi mas posibilidades de consumo en el mercado.
                         </p>
                     </div>
                 </div>
@@ -250,7 +250,7 @@
             </div>
             <br>
             <br>
-            
+
             <div class="row ">
                 <div class="col-md-4">
                     <div class="boder-Badges">
@@ -291,7 +291,7 @@
                     </div>
                 </div>
                 <!--/.col-xs-6.col-lg-4-->
-                
+
             </div>
             <!-- /.container- Nosotros -->
 
@@ -302,7 +302,7 @@
 
     <a  name="contact"></a>
     <div class="banner">
-        
+
         <!-- EXTRACT FORM HERE =======> -->
     <div class="container">
       <div id="contact_form" class="row">
@@ -317,7 +317,7 @@
               </div>
               <span class="help-block" style="display: none;">Por favor, escriba su nombre.</span>
             </div>
-            
+
             <div class="form-group">
               <label class="control-label" for="email">Motivo de Contacto*</label>
               <select name="reason" class="form-control">
@@ -403,7 +403,7 @@
                     <div align="center">
                     <p class="copyright text-muted small">Copyright &copy; SIMBit2016. todos los derechos reservados</p>
                     </div>
-                 </div>    
+                 </div>
             </div>
         </div>
     </footer>
@@ -417,6 +417,6 @@
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
     <script src="assets/vender/intl-tel-input/js/intlTelInput.min.js"></script>
     <script src="assets/js/contact-form.js"></script>
-    
+
 </body>
 </html>

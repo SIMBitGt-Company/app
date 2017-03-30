@@ -1,11 +1,9 @@
 <div class="container" id="DivRegAccesorie" style="background: #212121" hidden>
     <div class="row">
-        <div class="col-md-11 col-md-offset-0">
-        <br>
-            <div class="panel panel-primary">
-                <div class="panel-heading">Registrar Accesorio</div>
-                <!--corlor de fondo al panel style="background: #01579B"-->
-                <div class="panel-body">
+        <div class="col-md-11 col-md-offset-0"><br>
+            <!--div class="panel panel-primary"-->
+                <div class="panel-heading"><h3>Registrar Accesorio</h3></div>
+                <!--div class="panel-body"-->
                     <form class="form-horizontal" role="form" method="POST" action="{{ url('car')}}">
                         {{ csrf_field() }}
 
@@ -93,7 +91,7 @@
                                 </select>
                             </div>
 
-                            
+
                         </div>
 
 
@@ -117,11 +115,8 @@
                         @endif
 
                     </form>
-                </div>
-                <div class="panel-footer">@Simbit</div>
+                <!--/div-->
+                <!--div class="panel-footer">@Simbit</div-->
             </div>
         </div>
     </div>
-</div>
-
-
