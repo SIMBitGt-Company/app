@@ -1,7 +1,7 @@
 <?php
 
 namespace MyApp\Http\Controllers;
-
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use MyApp\User;
 
@@ -54,7 +54,7 @@ class Users extends Controller
         $user->phone2 = $request->phone2;
         $user->id_rol = 2;
         $user->direction = $request->direction;
-        
+
 
        if($user->save())
         {
@@ -109,5 +109,34 @@ class Users extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  mail  $email
+     * @return \Illuminate\Http\Response
+     */
+    public function getUser(Request $request)
+    {
+
+        try
+        {
+          //$user = DB::table('users')->where('name', 'John')->first();
+          $user = DB::table('users')->where('email', $request->mail)->first();
+          return response(['name'     =>  $user->name,
+                           'nit'      =>  $user->nit,
+                           'direction'=>  $user->direction,
+                           'phone'    =>  $user->phone,
+                           'phone2'   =>  $user->phone2,
+                         ],200);
+        }
+        catch (Illuminate\Database\QueryException $ex)
+        {
+          //return response(['error'=>$ex->getMessage()],500);
+          return $ex->getMessage();
+
+        }
+
     }
 }

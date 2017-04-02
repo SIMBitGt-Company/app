@@ -24,6 +24,8 @@ Route::resource('/brand','Brands');
 
 //Users
 Route::resource('/user','Users');
+Route::post('/user/mail','Users@getUser');
 
 //Cars
 Route::resource('/car','Cars');
+Route::post('/car/plate','Cars@getCar');

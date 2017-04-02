@@ -1,7 +1,7 @@
 <?php
 
 namespace MyApp\Http\Controllers;
-
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use MyApp\Car;
 
@@ -52,7 +52,7 @@ class Cars extends Controller
         $carro->engine_serial = $request->engine_serial;
         $carro->km_mi = $request->km_mi;
         $carro->brand = 1;
-        
+
 
        if($carro->save())
         {
@@ -73,6 +73,12 @@ class Cars extends Controller
     public function show($id)
     {
         //
+        //$car = DB::table('cars')->where('plate_number', $id)->first();
+        $car = DB::table('cars')
+            ->join('brands', 'cars.brand', '=', 'brands.id')
+            ->select('cars.*', 'brands.name')->where('cars.plate_number', $id)
+            ->first();
+        dd($car);
     }
 
     /**
@@ -107,5 +113,32 @@ class Cars extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function getCar(Request $request)
+    {
+      try
+      {
+        $car = DB::table('cars')
+            ->join('brands', 'cars.brand', '=', 'brands.id')
+            ->select('cars.*', 'brands.name')->where('cars.plate_number', $request->plate)
+            ->first();
+
+        //$car = DB::table('cars')->where('plate_number', $request->plate)->first();
+
+        return response(['model'            =>  $car->model,
+                         'color'            =>  $car->color,
+                         'engine_serial'    =>  $car->engine_serial,
+                         'millaje'          =>  $car->km_mi,
+                         'brand'            =>  $car->name,
+                       ],200);
+        return $car;
+      }
+      catch (Illuminate\Database\QueryException $ex)
+      {
+        //return response(['error'=>$ex->getMessage()],500);
+        return $ex->getMessage();
+
+      }
     }
 }
