@@ -115,16 +115,13 @@
          @endif
         <!-- /.navbar-collapse -->
     </nav>
-<!--div class="container-fluid">
-   <div class="row">
-    <img src="img/header.jpg" class="img-responsive">
-   </div>
-</div-->
+
     @yield('content')
 
 </div>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
+
 </body>
 </html>

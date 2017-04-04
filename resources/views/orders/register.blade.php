@@ -2,20 +2,20 @@
     <div class="row">
         <div class="col-md-11 col-md-offset-0"><br>
               <div class="panel-heading"><center><h3>Registrar Orden</h3></center></div>
-                  <form id="fr1" name="fr1" class="form-horizontal" role="form" method="POST" action="">
+                  <form id="OR1" name="OR1" class="form-horizontal" role="form" method="POST" action="">
                       <div class="panel-heading"><h4>Datos del propietario</h4></div>
-                      <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                          <label for="email" class="col-md-2 control-label">E-mail</label>
+                      <div class="form-group{{ $errors->has('OR1_mail') ? ' has-error' : '' }}">
+                          <label for="mail" class="col-md-2 control-label">E-mail</label>
                           <div class="col-md-5">
-                              <input id="email" type="email" class="form-control" name="email" required autofocus>
+                              <input id="mail" type="email" class="form-control" name="mail" required autofocus>
 
-                              @if ($errors->has('email'))
+                              @if ($errors->has('mail'))
                                   <span class="help-block">
-                                      <strong>{{ $errors->first('email') }}</strong>
+                                      <strong>{{ $errors->first('mail') }}</strong>
                                   </span>
                               @endif
                           </div>
-                          <button id="SearchOwner" type="submit" class="btn btn-primary"><i class="fa fa-fw fa-user"></i>
+                          <button id="OR1_btn" type="submit" class="btn btn-primary"><i class="fa fa-fw fa-user"></i>
                           </button>
                       </div>
 
@@ -53,94 +53,190 @@
                               <input id="phone2" type="text" class="form-control" name="phone2" required autofocus disabled>
                           </div>
                       </div>
+
+                      <div class="form-group" hidden>
+                          <label for="id" class="col-md-2 control-label">id</label>
+                          <div class="col-md-5">
+                              <input id="id" type="text" class="form-control" name="id" disabled>
+                          </div>
+                     </div>
+
                       <br>
 
-                      <div id='msjFrm1' class="">
+                      <div id='Msj' class="">
                       </div>
                     </form>
 
-                    <form id="fr2" name="fr2" class="form-horizontal" role="form" method="POST" action="">
+                    <form id="OR2" name="OR2" class="form-horizontal" role="form" method="POST" action="">
                       <div class="panel-heading"><h4>Persona de Contacto</h4></div>
 
-                      <div class="form-group{{ $errors->has('mail2') ? ' has-error' : '' }}">
-                          <label for="mail2" class="col-md-2 control-label">E-mail</label>
+                      <div class="form-group{{ $errors->has('mail') ? ' has-error' : '' }}">
+                          <label for="mail" class="col-md-2 control-label">E-mail</label>
                           <div class="col-md-5">
-                              <input id="mail2" type="text" class="form-control" name="mail2" required autofocus>
-                              @if ($errors->has('mail2'))
+                              <input id="mail" type="text" class="form-control" name="mail" required autofocus>
+                              @if ($errors->has('mail'))
                                   <span class="help-block">
-                                      <strong>{{ $errors->first('mail2') }}</strong>
+                                      <strong>{{ $errors->first('mail') }}</strong>
                                   </span>
                               @endif
                           </div>
-                          <button id="SearchContact" type="submit" class="btn btn-primary"><i class="fa fa-fw fa-user"></i>
+                          <button id="OR2_btn" type="submit" class="btn btn-primary"><i class="fa fa-fw fa-user"></i>
                           </button>
                       </div>
 
                       <div class="form-group has-warning">
-                          <label for="name2" class="col-md-2 control-label">Nombre</label>
+                          <label for="name" class="col-md-2 control-label">Nombre</label>
                           <div class="col-md-5">
-                              <input id="name2" type="text" class="form-control" name="name2" required autofocus disabled>
+                              <input id="name" type="text" class="form-control" name="name" required autofocus disabled>
                           </div>
                       </div>
 
                       <div class="form-group has-warning">
-                          <label for="phone3" class="col-md-2 control-label">Telefono Principal</label>
+                          <label for="phone" class="col-md-2 control-label">Telefono Principal</label>
                           <div class="col-md-5">
-                              <input id="phone3" type="text" class="form-control" name="phone3" required autofocus disabled>
+                              <input id="phone" type="text" class="form-control" name="phone" required autofocus disabled>
                           </div>
                       </div>
 
                       <div class="form-group has-warning">
-                          <label for="phone4" class="col-md-2 control-label">Telefono Secundario</label>
+                          <label for="phone2" class="col-md-2 control-label">Telefono Secundario</label>
                           <div class="col-md-5">
-                              <input id="phone4" type="text" class="form-control" name="phone4" required autofocus disabled>
+                              <input id="phone2" type="text" class="form-control" name="phone2" required autofocus disabled>
                           </div>
                       </div>
-                      <div id='msjFrm2' class="">
+                      <div class="form-group" hidden>
+                          <label for="id" class="col-md-2 control-label">id</label>
+                          <div class="col-md-5">
+                              <input id="id" type="text" class="form-control" name="id" disabled>
+                          </div>
+                     </div>
+                      <div id='Msj' class="">
                       </div>
                       <br>
                     </form>
 
-                    <form id="fr3" name="fr3" class="form-horizontal" role="form" method="POST" action="">
+                    <form id="OR3" name="OR3" class="form-horizontal" role="form" method="POST" action="">
 
                       <div class="panel-heading"><h4>Datos del Vehiculo</h4></div>
-                      <div class="form-group{{ $errors->has('plateX') ? ' has-error' : '' }}">
-                          <label for="plateX" class="col-md-2 control-label">Placa No.:</label>
+                      <div class="form-group{{ $errors->has('plate') ? ' has-error' : '' }}">
+                          <label for="plate" class="col-md-2 control-label">Placa No.:</label>
                           <div class="col-md-5">
-                              <input id="plateX" type="text" class="form-control" name="plateX" required autofocus>
-                              @if ($errors->has('plateX'))
+                              <input id="plate" type="text" class="form-control" name="plate" required autofocus>
+                              @if ($errors->has('plate'))
                                   <span class="help-block">
-                                      <strong>{{ $errors->first('plateX') }}</strong>
+                                      <strong>{{ $errors->first('plate') }}</strong>
                                   </span>
                               @endif
                           </div>
-                          <button id="SearchCarPlate" type="submit" class="btn btn-primary"><i class="fa fa-fw fa-car"></i>
+                          <button id="OR3_btn" type="submit" class="btn btn-primary"><i class="fa fa-fw fa-car"></i>
                           </button>
                       </div>
 
                       <div class="form-group has-warning">
-                          <label for="frm3Brand" class="col-md-2 control-label">Marca:</label>
+                          <label for="brand" class="col-md-2 control-label">Marca:</label>
                           <div class="col-md-5">
-                              <input id="frm3Brand" type="text" class="form-control" name="frm3Brand" disabled>
+                              <input id="brand" type="text" class="form-control" name="brand" disabled>
                           </div>
                       </div>
 
                       <div class="form-group has-warning">
-                          <label for="frm3Model" class="col-md-2 control-label">Modelo:</label>
+                          <label for="model" class="col-md-2 control-label">Modelo:</label>
                           <div class="col-md-5">
-                              <input id="frm3Model" type="text" class="form-control" name="frm3Model" disabled>
+                              <input id="model" type="text" class="form-control" name="model" disabled>
                           </div>
                       </div>
 
                       <div class="form-group has-warning">
-                          <label for="frm3Color" class="col-md-2 control-label">Color:</label>
+                          <label for="color" class="col-md-2 control-label">Color:</label>
                           <div class="col-md-5">
-                              <input id="frm3Color" type="text" class="form-control" name="frm3Color" disabled>
+                              <input id="color" type="text" class="form-control" name="color" disabled>
                           </div>
                       </div>
-                      <div id='msjFrm3' class="">
+
+                      <div class="form-group" hidden>
+                          <label for="id" class="col-md-2 control-label">id</label>
+                          <div class="col-md-5">
+                              <input id="id" type="text" class="form-control" name="id" disabled>
+                          </div>
+                     </div>
+
+                      <div id='Msj' class="">
                       </div>
                 </form>
+
+                <form id="OR4" name="OR4" class="form-horizontal" role="form" method="POST" action="">
+
+                  <div class="panel-heading"><h4>Detalle de la Orden</h4></div>
+                  <div class="form-group{{ $errors->has('fuel_level') ? ' has-error' : '' }}">
+                      <label for="fuel_level" class="col-md-2 control-label">Nivel de Combustible:</label>
+                      <div class="col-md-5">
+                          <input id="fuel_level" type="text" class="form-control" name="fuel_level" required autofocus>
+                          @if ($errors->has('fuel_level'))
+                              <span class="help-block">
+                                  <strong>{{ $errors->first('fuel_level') }}</strong>
+                              </span>
+                          @endif
+                      </div>
+                  </div>
+
+                  <div class="form-group{{ $errors->has('mi') ? ' has-error' : '' }}">
+                      <label for="mi" class="col-md-2 control-label">Millaje/Km:</label>
+                      <div class="col-md-5">
+                          <input id="mi" type="text" class="form-control" name="mi" required autofocus>
+                          @if ($errors->has('mi'))
+                              <span class="help-block">
+                                  <strong>{{ $errors->first('mi') }}</strong>
+                              </span>
+                          @endif
+                      </div>
+                  </div>
+
+                  <div class="form-group">
+                      <label for="observations" class="col-md-2 control-label">Observaciones:</label>
+                      <div class="col-md-5">
+                          <textarea id="observations" type="text" class="form-control" name="observations" autofocus>
+                          </textarea>
+                      </div>
+                  </div>
+                  <br>
+                  <hr>
+                  <div class="form-group">
+                    <div id="fine-uploader-validation"></div>
+                    <script>
+                      $('#fine-uploader-validation').fineUploader({
+                          template: 'qq-template-validation',
+                          request: {
+                              endpoint: '/server/uploads'
+                          },
+                          thumbnails: {
+                              placeholders: {
+                                  waitingPath: '/source/placeholders/waiting-generic.png',
+                                  notAvailablePath: '/source/placeholders/not_available-generic.png'
+                              }
+                          },
+                          validation: {
+                              allowedExtensions: ['jpeg', 'jpg', 'png'],
+                              itemLimit: 6,
+                              //sizeLimit: 51200 // 50 kB = 50 * 1024 bytes
+                          }
+                      });
+                  </script>
+                  </div>
+                  <hr>
+                  <br>
+
+                  <div class="form-group">
+                    <center>
+                    <button id="OR4_btn" type="submit" class="btn btn-primary"><i class="fa fa-fw fa-save"></i>
+                      Guardar Orden de Servicio
+                    </button>
+                  </center>
+                  </div>
+
+                  <div id='Msj' class="">
+                  </div>
+
+            </form>
         </div>
     </div>
 </div>

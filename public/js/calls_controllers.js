@@ -45,19 +45,20 @@ $(document).ready(
 
     });
 
-    $("#SearchOwner").click(function(e){
+    $("#OR1_btn").click(function(e){
 
-       $("#msjFrm1").html('');
-       $("#msjFrm1").removeClass("alert alert-warning alert-dismissable");
-       $("#msjFrm1").fadeOut();
+       $("#OR1").find("#Msj").html('');
+       $("#OR1").find("#Msj").removeClass("alert alert-warning alert-dismissable");
+       $("#OR1").find("#Msj").fadeOut();
 
-       $("#name").val('');
-       $("#nit").val('');
-       $("#direction").val('');
-       $("#phone").val('');
-       $("#phone2").val('');
+       $("#OR1").find("#name").val('');
+       $("#OR1").find("#nit").val('');
+       $("#OR1").find("#direction").val('');
+       $("#OR1").find("#phone").val('');
+       $("#OR1").find("#phone2").val('');
+       $("#OR1").find("#id").val('');
 
-        var email = $("#email").val();
+        var email = $("#OR1").find("#mail").val();
 
         if(email!='')
         {
@@ -78,20 +79,21 @@ $(document).ready(
                   success: function(result)
                   {
 
-                      $("#name").val(result.name);
-                      $("#nit").val(result.nit);
-                      $("#direction").val(result.direction);
-                      $("#phone").val(result.phone);
-                      $("#phone2").val(result.phone2);
+                      $("#OR1").find("#name").val(result.name);
+                      $("#OR1").find("#nit").val(result.nit);
+                      $("#OR1").find("#direction").val(result.direction);
+                      $("#OR1").find("#phone").val(result.phone);
+                      $("#OR1").find("#phone2").val(result.phone2);
+                      $("#OR1").find("#id").val(result.id);
                   },
                   error: function(result)
                   {
 
-                    $("#msjFrm1").addClass("alert alert-warning alert-dismissable");
-                    $("#msjFrm1").fadeIn();
+                    $("#OR1").find("#Msj").addClass("alert alert-warning alert-dismissable");
+                    $("#OR1").find("#Msj").fadeIn();
                     var msj = '<button type="button" class="close" data-dismiss="alert">&times;</button>'
                               +'<strong>¡Error!</strong> No se ha encontrado el usuario indicado.';
-                    $("#msjFrm1").html(msj);
+                    $("#OR1").find("#Msj").html(msj);
 
                   }
 
@@ -102,18 +104,19 @@ $(document).ready(
 
     });
 
-    $("#SearchContact").click(function(e){
+    $("#OR2_btn").click(function(e){
 
-      $("#msjFrm2").html('');
-      $("#msjFrm2").removeClass("alert alert-warning alert-dismissable");
-      $("#msjFrm2").fadeOut();
+      $("#OR2").find("#Msj").html('');
+      $("#OR2").find("#Msj").removeClass("alert alert-warning alert-dismissable");
+      $("#OR2").find("#Msj").fadeOut();
 
-      $("#name2").val('');
-      $("#phone3").val('');
-      $("#phone4").val('');
+      $("#OR2").find("#name").val('');
+      $("#OR2").find("#phone").val('');
+      $("#OR2").find("#phone2").val('');
+      $("#OR2").find("#id").val('');
 
 
-        var email = $("#mail2").val();
+        var email = $("#OR2").find("#mail").val();
 
         if(email!='')
         {
@@ -132,18 +135,19 @@ $(document).ready(
                   success: function(result)
                   {
 
-                      $("#name2").val(result.name);
-                      $("#phone3").val(result.phone);
-                      $("#phone4").val(result.phone2);
+                      $("#OR2").find("#name").val(result.name);
+                      $("#OR2").find("#phone").val(result.phone);
+                      $("#OR2").find("#phone2").val(result.phone2);
+                      $("#OR2").find("#id").val(result.id);
                   },
                   error: function(result)
                   {
 
-                    $("#msjFrm2").addClass("alert alert-warning alert-dismissable");
-                    $("#msjFrm2").fadeIn();
+                    $("#OR2").find("#Msj").addClass("alert alert-warning alert-dismissable");
+                    $("#OR2").find("#Msj").fadeIn();
                     var msj = '<button type="button" class="close" data-dismiss="alert">&times;</button>'
                               +'<strong>¡Error!</strong> No se ha encontrado el usuario indicado.';
-                    $("#msjFrm2").html(msj);
+                    $("#OR2").find("#Msj").html(msj);
                   }
 
               }
@@ -153,17 +157,18 @@ $(document).ready(
 
     });
 
-    $("#SearchCarPlate").click(function(e){
+    $("#OR3_btn").click(function(e){
 
-        $("#msjFrm3").html('');
-        $("#msjFrm3").removeClass("alert alert-warning alert-dismissable");
-        $("#msjFrm3").fadeOut();
+        $("#OR3").find("#Msj").html('');
+        $("#OR3").find("#Msj").removeClass("alert alert-warning alert-dismissable");
+        $("#OR3").find("#Msj").fadeOut();
 
-        $("#frm3Brand").val('');
-        $("#frm3Model").val('');
-        $("#frm3Color").val('');
+        $("#OR3").find("#brand").val('');
+        $("#OR3").find("#model").val('');
+        $("#OR3").find("#color").val('');
+        $("#OR3").find("#id").val('');
 
-        var plate = $("#plateX").val();
+        var plate = $("#OR3").find("#plate").val();
 
         if(plate != '')
         {
@@ -179,23 +184,86 @@ $(document).ready(
                   success: function(result)
                   {
 
-                      $("#frm3Brand").val(result.brand);
-                      $("#frm3Model").val(result.model);
-                      $("#frm3Color").val(result.color);
+                      $("#OR3").find("#brand").val(result.brand);
+                      $("#OR3").find("#model").val(result.model);
+                      $("#OR3").find("#color").val(result.color);
+                      $("#OR3").find("#id").val(result.id);
                   },
                   error: function(result)
                   {
 
-                    $("#msjFrm3").addClass("alert alert-warning alert-dismissable");
-                    $("#msjFrm3").fadeIn();
+                    $("#OR3").find("#Msj").addClass("alert alert-warning alert-dismissable");
+                    $("#OR3").find("#Msj").fadeIn();
                     var msj = '<button type="button" class="close" data-dismiss="alert">&times;</button>'
                               +'<strong>¡Error!</strong> No se ha encontrado el vehiculo indicado.';
-                    $("#msjFrm3").html(msj);
+                    $("#OR3").find("#Msj").html(msj);
                   }
 
               }
           );
         }
+
+    });
+
+    $("#OR4_btn").click(function(e){
+      var fuel = $("#OR4").find("#fuel_level").val();
+      var mi = $("#OR4").find("#mi").val();
+      var observations = $("#OR4").find("#observations").val();
+
+      if(fuel != '' && mi != '')
+      {
+
+
+
+        $("#OR4").find("#Msj").html('');
+        $("#OR4").find("#Msj").removeClass("alert alert-warning alert-dismissable");
+        $("#OR4").find("#Msj").fadeOut();
+
+        var owner = $("#OR1").find("#id").val();
+        var contact = $("#OR2").find("#id").val();
+        var car =  $("#OR3").find("#id").val();
+
+        var cadena = "El propietario es: "+owner+" El Contacto es: "+contact+" El vehiculo es: "+car;
+
+
+
+        if(owner != '' && contact != '' && car != '')
+        {
+          e.preventDefault();
+          $.ajax(
+              {
+                  url:"car/plate",
+                  type:"POST",
+                  data:
+                      {
+                          plate: plate
+                      },
+                  success: function(result)
+                  {
+
+                      $("#OR3").find("#brand").val(result.brand);
+                      $("#OR3").find("#model").val(result.model);
+                      $("#OR3").find("#color").val(result.color);
+                      $("#OR3").find("#id").val(result.id);
+                  },
+                  error: function(result)
+                  {
+
+                    $("#OR3").find("#Msj").addClass("alert alert-warning alert-dismissable");
+                    $("#OR3").find("#Msj").fadeIn();
+                    var msj = '<button type="button" class="close" data-dismiss="alert">&times;</button>'
+                              +'<strong>¡Error!</strong> No se ha encontrado el vehiculo indicado.';
+                    $("#OR3").find("#Msj").html(msj);
+                  }
+
+              }
+          );
+        }
+        else
+        {
+          alert('Mula llene los datos');
+        }
+    }
 
     });
 });

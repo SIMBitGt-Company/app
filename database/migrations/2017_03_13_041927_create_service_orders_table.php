@@ -18,10 +18,13 @@ class CreateServiceOrdersTable extends Migration
             $table->timestamps();
             $table->string('observations',450)->nullable();
             $table->decimal('fuel_level', 5, 2);
+            $table->decimal('km_mi', 8, 2);
             $table->integer('state')->unsigned();
             $table->foreign('state')->references('id')->on('state_orders')->onDelete('cascade');
             $table->integer('user')->unsigned();
             $table->foreign('user')->references('id')->on('users')->onDelete('cascade');
+            $table->integer('contact')->unsigned();
+            $table->foreign('contact')->references('id')->on('users')->onDelete('cascade');
             $table->integer('mechanic')->unsigned();
             $table->foreign('mechanic')->references('id')->on('users')->onDelete('cascade');
             $table->string('vehicle',20);

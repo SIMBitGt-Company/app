@@ -75,6 +75,9 @@ class Users extends Controller
     public function show($id)
     {
         //
+        $mail = "daytongarcia@gmail.com";
+        //$user = DB::table('users')->where('email', $mail)->first();
+        dd($mail);
     }
 
     /**
@@ -129,6 +132,7 @@ class Users extends Controller
                            'direction'=>  $user->direction,
                            'phone'    =>  $user->phone,
                            'phone2'   =>  $user->phone2,
+                           'id'       =>  $user->id,
                          ],200);
         }
         catch (Illuminate\Database\QueryException $ex)

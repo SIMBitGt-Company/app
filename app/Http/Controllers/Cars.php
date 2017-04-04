@@ -131,6 +131,7 @@ class Cars extends Controller
                          'engine_serial'    =>  $car->engine_serial,
                          'millaje'          =>  $car->km_mi,
                          'brand'            =>  $car->name,
+                         'id'               =>  $car->plate_number,
                        ],200);
         return $car;
       }
