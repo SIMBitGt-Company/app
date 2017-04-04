@@ -1,4 +1,16 @@
-<script type="text/template" id="qq-template-validation">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+<!-- Fine Uploader New/Modern CSS file
+====================================================================== -->
+<link href="source/fine-uploader-new.css" rel="stylesheet">
+
+<!-- Fine Uploader jQuery JS file
+====================================================================== -->
+<script src="source/jquery.fine-uploader.js"></script>
+
+<!-- Fine Uploader Thumbnails template w/ customization
+====================================================================== -->
+<script type="text/template" id="qq-template-manual-trigger">
     <div class="qq-uploader-selector qq-uploader" qq-drop-area-text="Drop files here">
         <div class="qq-total-progress-bar-container-selector qq-total-progress-bar-container">
             <div role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" class="qq-total-progress-bar-selector qq-progress-bar qq-total-progress-bar"></div>
@@ -6,8 +18,13 @@
         <div class="qq-upload-drop-area-selector qq-upload-drop-area" qq-hide-dropzone>
             <span class="qq-upload-drop-area-text-selector"></span>
         </div>
-        <div class="qq-upload-button-selector qq-upload-button">
-            <div>Cargar Fotos</div>
+        <div class="buttons">
+            <div class="qq-upload-button-selector qq-upload-button">
+                <div>Select files</div>
+            </div>
+            <button type="button" id="trigger-upload" class="btn btn-primary">
+                <i class="icon-upload icon-white"></i> Upload
+            </button>
         </div>
         <span class="qq-drop-processing-selector qq-drop-processing">
             <span>Processing dropped files...</span>
@@ -21,6 +38,8 @@
                 <span class="qq-upload-spinner-selector qq-upload-spinner"></span>
                 <img class="qq-thumbnail-selector" qq-max-size="100" qq-server-scale>
                 <span class="qq-upload-file-selector qq-upload-file"></span>
+                <span class="qq-edit-filename-icon-selector qq-edit-filename-icon" aria-label="Edit filename"></span>
+                <input class="qq-edit-filename-selector qq-edit-filename" tabindex="0" type="text">
                 <span class="qq-upload-size-selector qq-upload-size"></span>
                 <button type="button" class="qq-btn qq-upload-cancel-selector qq-upload-cancel">Cancel</button>
                 <button type="button" class="qq-btn qq-upload-retry-selector qq-upload-retry">Retry</button>
@@ -54,3 +73,25 @@
         </dialog>
     </div>
 </script>
+
+<style>
+    #trigger-upload {
+        color: white;
+        background-color: #00ABC7;
+        font-size: 14px;
+        padding: 7px 20px;
+        background-image: none;
+    }
+
+    #fine-uploader-manual-trigger .qq-upload-button {
+        margin-right: 15px;
+    }
+
+    #fine-uploader-manual-trigger .buttons {
+        width: 36%;
+    }
+
+    #fine-uploader-manual-trigger .qq-uploader .qq-total-progress-bar-container {
+        width: 60%;
+    }
+</style>

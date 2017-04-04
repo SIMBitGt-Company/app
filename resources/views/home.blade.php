@@ -1,14 +1,5 @@
 @extends('layouts.app')
 @section('scripts')
-	<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
-	<script type="text/javascript" src="{{ asset('js/change.js') }}"></script>
-	<script type="text/javascript" src="{{ asset('js/calls_controllers.js') }}"></script>
-	<!-- Fine Uploader jQuery JS and CSS files
-	====================================================================== -->
-	<link href="fine-uploader/fine-uploader-new.css" rel="stylesheet">
-  <script src="fine-uploader/jquery.fine-uploader.js"></script>
-	<!-- Fine Uploader jQuery JS and CSS files
-	====================================================================== -->
   @include('fine-uploader.script')
 @endsection
 @section('content')
@@ -40,4 +31,9 @@
 	@include('users.orders')							<!--Forms with prefix UO -->
 	@include('users.search')							<!--Forms with prefix US -->
 
+@endsection
+
+@section('jquery')
+<script type="text/javascript" src="{{ asset('js/change.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/calls_controllers.js') }}"></script>
 @endsection

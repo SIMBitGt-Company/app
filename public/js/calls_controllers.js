@@ -206,6 +206,9 @@ $(document).ready(
     });
 
     $("#OR4_btn").click(function(e){
+
+
+
       var fuel = $("#OR4").find("#fuel_level").val();
       var mi = $("#OR4").find("#mi").val();
       var observations = $("#OR4").find("#observations").val();

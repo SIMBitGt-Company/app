@@ -32,7 +32,7 @@ $(document).ready(
         $('#DivOrderUser').hide();
         $('#DivRegUsuario').hide();
         $('#DivSearchUser').hide();
-        
+
     });
 
     $("#SearchOrder").click(function(){
@@ -63,7 +63,7 @@ $(document).ready(
         $('#DivOrderUser').hide();
         $('#DivRegUsuario').hide();
         $('#DivSearchUser').hide();
-        
+
     });
 
     $("#HistoryOrder").click(function(){
@@ -94,7 +94,7 @@ $(document).ready(
         $('#DivOrderUser').hide();
         $('#DivRegUsuario').hide();
         $('#DivSearchUser').hide();
-        
+
     });
 
 //MENU CUSTOMERS
@@ -126,7 +126,7 @@ $(document).ready(
         $('#DivOrderUser').hide();
         $('#DivRegUsuario').show();
         $('#DivSearchUser').hide();
-        
+
     });
 
     $("#SearchUser").click(function(){
@@ -157,7 +157,7 @@ $(document).ready(
         $('#DivOrderUser').hide();
         $('#DivRegUsuario').hide();
         $('#DivSearchUser').show();
-        
+
     });
 
     $("#OrderUser").click(function(){
@@ -188,7 +188,7 @@ $(document).ready(
         $('#DivOrderUser').show();
         $('#DivRegUsuario').hide();
         $('#DivSearchUser').hide();
-        
+
     });
 
 //MENU VEHICLES
@@ -457,6 +457,6 @@ $(document).ready(
         $('#DivOrderUser').hide();
         $('#DivRegUsuario').hide();
         $('#DivSearchUser').hide();
-    });  
+    });
 
 });

@@ -201,26 +201,28 @@
                   <br>
                   <hr>
                   <div class="form-group">
-                    <div id="fine-uploader-validation"></div>
-                    <script>
-                      $('#fine-uploader-validation').fineUploader({
-                          template: 'qq-template-validation',
-                          request: {
-                              endpoint: '/server/uploads'
-                          },
-                          thumbnails: {
-                              placeholders: {
-                                  waitingPath: '/source/placeholders/waiting-generic.png',
-                                  notAvailablePath: '/source/placeholders/not_available-generic.png'
-                              }
-                          },
-                          validation: {
-                              allowedExtensions: ['jpeg', 'jpg', 'png'],
-                              itemLimit: 6,
-                              //sizeLimit: 51200 // 50 kB = 50 * 1024 bytes
+                  <div id="fine-uploader-manual-trigger"></div>
+                  <script>
+                  $('#fine-uploader-manual-trigger').fineUploader({
+                      template: 'qq-template-manual-trigger',
+                      request: {
+                          endpoint: "{{ asset('img') }}"
+                      },
+                      thumbnails: {
+                          placeholders: {
+                              waitingPath: "{{ asset('source/placeholders/waiting-generic.png') }}",
+                              notAvailablePath: "{{ asset('source/placeholders/not_available-generic.png') }}"
                           }
-                      });
-                  </script>
+                      },
+                      autoUpload: false
+                  });
+
+                  $('#trigger-upload').click(
+                    function()
+                    {
+                      $('#fine-uploader-manual-trigger').fineUploader('uploadStoredFiles');
+                  });
+                </script>
                   </div>
                   <hr>
                   <br>

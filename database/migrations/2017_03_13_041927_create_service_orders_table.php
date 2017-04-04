@@ -29,6 +29,12 @@ class CreateServiceOrdersTable extends Migration
             $table->foreign('mechanic')->references('id')->on('users')->onDelete('cascade');
             $table->string('vehicle',20);
             $table->foreign('vehicle')->references('plate_number')->on('cars')->onDelete('cascade');
+            $table->string('urlImg1',200)->nullable();
+            $table->string('urlImg2',200)->nullable();
+            $table->string('urlImg3',200)->nullable();
+            $table->string('urlImg4',200)->nullable();
+            $table->string('urlImg5',200)->nullable();
+            $table->string('urlImg6',200)->nullable();
             $table->decimal('total',5,2);
         });
     }
